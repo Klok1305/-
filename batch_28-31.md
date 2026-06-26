@@ -91,7 +91,9 @@
 
 **Определение.** Ортогональным дополнением подпространства $W \subset V$ (евклидово/эрмитово) называется
 
-$$W^\perp = \{v \in V : (v, w) = 0 \text{ для всех } w \in W\}.$$
+$$
+W^\perp = \{v \in V : (v, w) = 0 \text{ для всех } w \in W\}.
+$$
 
 $W^\perp$ — подпространство $V$.
 
@@ -101,19 +103,27 @@ $W^\perp$ — подпространство $V$.
 
 **Нахождение проекции.** Если $e_1, \ldots, e_k$ — ОНБ $W$, то
 
-$$\mathrm{pr}_W v = \sum_{i=1}^k (e_i, v)\, e_i.$$
+$$
+\mathrm{pr}_W v = \sum_{i=1}^k (e_i, v)\, e_i.
+$$
 
 **Расстояние от $v$ до $W$:**
 
-$$d(v, W) = \|v - \mathrm{pr}_W v\| = \|v_{W^\perp}\|.$$
+$$
+d(v, W) = \|v - \mathrm{pr}_W v\| = \|v_{W^\perp}\|.
+$$
 
 **Угол между вектором $v$ и подпространством $W$:**
 
-$$\cos\angle(v, W) = \frac{\|\mathrm{pr}_W v\|}{\|v\|}.$$
+$$
+\cos\angle(v, W) = \frac{\|\mathrm{pr}_W v\|}{\|v\|}.
+$$
 
 **Метод наименьших квадратов.** Дана система $Ax = b$ (переопределённая: строк больше, чем неизвестных). Ищем $x^*$ такой, что $\|Ax^* - b\|$ минимально. Решение: $x^*$ — решение системы нормальных уравнений
 
-$$A^T A x = A^T b.$$
+$$
+A^T A x = A^T b.
+$$
 
 Геометрически: $Ax^*$ — проекция $b$ на $\mathrm{Im} A$.
 
@@ -153,13 +163,17 @@ $W^\perp = \{v : (v,w)=0\, \forall w\in W\}$; $V = W \oplus W^\perp$. Проек
 
 **Определение.** Матрица Грама системы векторов $a_1, \ldots, a_k \in V$ (евклидово пространство):
 
-$$G(a_1, \ldots, a_k) = \begin{pmatrix} (a_1, a_1) & (a_1, a_2) & \cdots & (a_1, a_k) \\ (a_2, a_1) & (a_2, a_2) & \cdots & (a_2, a_k) \\ \vdots & & \ddots & \vdots \\ (a_k, a_1) & (a_k, a_2) & \cdots & (a_k, a_k) \end{pmatrix}.$$
+$$
+G(a_1, \ldots, a_k) = \begin{pmatrix} (a_1, a_1) & (a_1, a_2) & \cdots & (a_1, a_k) \\ (a_2, a_1) & (a_2, a_2) & \cdots & (a_2, a_k) \\ \vdots & & \ddots & \vdots \\ (a_k, a_1) & (a_k, a_2) & \cdots & (a_k, a_k) \end{pmatrix}.
+$$
 
 Матрица симметрична (или эрмитова) и положительно полуопределена. Она положительно определена $\Leftrightarrow$ $a_1, \ldots, a_k$ линейно независимы.
 
 **Теорема (объём через матрицу Грама).**
 
-$$\mathrm{vol}_k^2(a_1, \ldots, a_k) = \det G(a_1, \ldots, a_k).$$
+$$
+\mathrm{vol}_k^2(a_1, \ldots, a_k) = \det G(a_1, \ldots, a_k).
+$$
 
 Здесь $\mathrm{vol}_k$ — $k$-мерный объём параллелепипеда, натянутого на $a_1, \ldots, a_k$.
 
@@ -169,7 +183,9 @@ $$\mathrm{vol}_k^2(a_1, \ldots, a_k) = \det G(a_1, \ldots, a_k).$$
 
 **Связь с матрицей перехода.** Если $e_1, \ldots, e_n$ — ОНБ и $a_i = A e_i$ (т.е. $A$ — матрица с $a_i$ в строках), то
 
-$$G(a_1, \ldots, a_k) = A \cdot A^T,$$
+$$
+G(a_1, \ldots, a_k) = A \cdot A^T,
+$$
 
 и $\det G = (\det A)^2$, т.е. $\mathrm{vol}_k = |\det A|$.
 
@@ -178,7 +194,10 @@ $$G(a_1, \ldots, a_k) = A \cdot A^T,$$
 **Доказательство теоремы об объёме:**
 
 Применим ортогонализацию Грама–Шмидта к $a_1, \ldots, a_k$: получим ортогональные $b_1, \ldots, b_k$ с $\langle b_1,\ldots,b_i\rangle = \langle a_1,\ldots,a_i\rangle$. Тогда:
-$$\mathrm{vol}_k = |b_1| \cdot |b_2| \cdots |b_k|.$$
+
+$$
+\mathrm{vol}_k = |b_1| \cdot |b_2| \cdots |b_k|.
+$$
 
 Матрица перехода от $(a_i)$ к $(b_i)$ — верхнетреугольная $T$ с единицами на диагонали, т.е. $\det T = 1$. Поэтому $\det G(a_i) = \det G(b_i) = \prod |b_i|^2 = \mathrm{vol}_k^2$.
 
@@ -212,13 +231,17 @@ $G_{ij} = (a_i, a_j)$. Теорема: $\det G = \mathrm{vol}_k^2$. Доказа
 
 **Канонический изоморфизм.** В евклидовом пространстве $V$ отображение
 
-$$\phi: V \to V^*, \quad u \mapsto (u, \cdot)$$
+$$
+\phi: V \to V^*, \quad u \mapsto (u, \cdot)
+$$
 
 (т.е. $\phi(u)(v) = (u, v)$) является изоморфизмом. В эрмитовом — полуторалинейным изоморфизмом.
 
 **Определение сопряжённого оператора.** Для оператора $\mathcal{A}: V \to V$ сопряжённым называется оператор $\mathcal{A}^*: V \to V$, определяемый условием
 
-$$(\mathcal{A}^* u, v) = (u, \mathcal{A} v) \quad \text{для всех } u, v \in V.$$
+$$
+(\mathcal{A}^* u, v) = (u, \mathcal{A} v) \quad \text{для всех } u, v \in V.
+$$
 
 Такой оператор существует и единственен.
 
@@ -227,7 +250,10 @@ $$(\mathcal{A}^* u, v) = (u, \mathcal{A} v) \quad \text{для всех } u, v \
 - В эрмитовом: $A^* = \bar{A}^T$ (сопряжённое транспонирование).
 
 **Соотношения:**
-$$(\mathcal{A} + \mathcal{B})^* = \mathcal{A}^* + \mathcal{B}^*, \quad (\lambda \mathcal{A})^* = \bar\lambda\, \mathcal{A}^*, \quad (\mathcal{A}\mathcal{B})^* = \mathcal{B}^* \mathcal{A}^*, \quad (\mathcal{A}^*)^* = \mathcal{A}.$$
+
+$$
+(\mathcal{A} + \mathcal{B})^* = \mathcal{A}^* + \mathcal{B}^*, \quad (\lambda \mathcal{A})^* = \bar\lambda\, \mathcal{A}^*, \quad (\mathcal{A}\mathcal{B})^* = \mathcal{B}^* \mathcal{A}^*, \quad (\mathcal{A}^*)^* = \mathcal{A}.
+$$
 
 ### 4. Уровень 2 — для четвёрки
 

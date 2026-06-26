@@ -79,19 +79,25 @@ $B_{ij} = -B_{ji}$ и $B_{ii} = 0$. Пример: симплектическая
 
 **Операция симметризации** $\mathrm{Sym}: T^0_q(V) \to S^q(V)$:
 
-$$(\mathrm{Sym}\, T)_{j_1\ldots j_q} = \frac{1}{q!} \sum_{\sigma \in S_q} T_{j_{\sigma(1)}\ldots j_{\sigma(q)}}.$$
+$$
+(\mathrm{Sym}\, T)_{j_1\ldots j_q} = \frac{1}{q!} \sum_{\sigma \in S_q} T_{j_{\sigma(1)}\ldots j_{\sigma(q)}}.
+$$
 
 Геометрически: $(\mathrm{Sym}\, \mathcal{T})(v_1,\ldots,v_q) = \frac{1}{q!} \sum_{\sigma \in S_q} \mathcal{T}(v_{\sigma(1)},\ldots,v_{\sigma(q)})$.
 
 **Операция альтернирования (антисимметризации)** $\mathrm{Alt}: T^0_q(V) \to \Lambda^q(V^*)$:
 
-$$(\mathrm{Alt}\, T)_{j_1\ldots j_q} = \frac{1}{q!} \sum_{\sigma \in S_q} \mathrm{sgn}(\sigma)\, T_{j_{\sigma(1)}\ldots j_{\sigma(q)}}.$$
+$$
+(\mathrm{Alt}\, T)_{j_1\ldots j_q} = \frac{1}{q!} \sum_{\sigma \in S_q} \mathrm{sgn}(\sigma)\, T_{j_{\sigma(1)}\ldots j_{\sigma(q)}}.
+$$
 
 Геометрически: $(\mathrm{Alt}\, \mathcal{T})(v_1,\ldots,v_q) = \frac{1}{q!} \sum_{\sigma \in S_q} \mathrm{sgn}(\sigma)\, \mathcal{T}(v_{\sigma(1)},\ldots,v_{\sigma(q)})$.
 
 **Свойство быть проектором.** Оба оператора — проекторы на соответствующие подпространства:
 
-$$\mathrm{Sym}^2 = \mathrm{Sym}, \quad \mathrm{Alt}^2 = \mathrm{Alt}.$$
+$$
+\mathrm{Sym}^2 = \mathrm{Sym}, \quad \mathrm{Alt}^2 = \mathrm{Alt}.
+$$
 
 Более того:
 - Если $T$ уже симметрический, то $\mathrm{Sym}\, T = T$.
@@ -101,11 +107,15 @@ $$\mathrm{Sym}^2 = \mathrm{Sym}, \quad \mathrm{Alt}^2 = \mathrm{Alt}.$$
 
 **Доказательство $\mathrm{Alt}^2 = \mathrm{Alt}$:** Пусть $T' = \mathrm{Alt}\, T$. Нужно показать $\mathrm{Alt}\, T' = T'$.
 
-$$(\mathrm{Alt}\, T')_{j_1\ldots j_q} = \frac{1}{q!} \sum_\tau \mathrm{sgn}(\tau)\, T'_{j_{\tau(1)}\ldots j_{\tau(q)}}.$$
+$$
+(\mathrm{Alt}\, T')_{j_1\ldots j_q} = \frac{1}{q!} \sum_\tau \mathrm{sgn}(\tau)\, T'_{j_{\tau(1)}\ldots j_{\tau(q)}}.
+$$
 
 Но $T'_{j_{\tau(1)}\ldots j_{\tau(q)}} = \mathrm{sgn}(\tau) T'_{j_1\ldots j_q}$ (т.к. $T'$ кососимметрический). Значит:
 
-$$(\mathrm{Alt}\, T')_{j_1\ldots j_q} = \frac{1}{q!} \sum_\tau \mathrm{sgn}^2(\tau)\, T'_{j_1\ldots j_q} = \frac{1}{q!} \cdot q! \cdot T'_{j_1\ldots j_q} = T'_{j_1\ldots j_q}.$$
+$$
+(\mathrm{Alt}\, T')_{j_1\ldots j_q} = \frac{1}{q!} \sum_\tau \mathrm{sgn}^2(\tau)\, T'_{j_1\ldots j_q} = \frac{1}{q!} \cdot q! \cdot T'_{j_1\ldots j_q} = T'_{j_1\ldots j_q}.
+$$
 
 **Примеры:**
 
@@ -135,15 +145,21 @@ $\mathrm{Alt}\,$ для $q=2$: $(\mathrm{Alt}\, T)_{ij} = \frac{T_{ij}-T_{ji}}{2
 
 **Определение (по Панову).** Внешнее произведение $P \wedge Q$ для $P \in \Lambda^p(V^*)$ и $Q \in \Lambda^q(V^*)$:
 
-$$P \wedge Q = \frac{(p+q)!}{p!\, q!}\, \mathrm{Alt}(P \otimes Q).$$
+$$
+P \wedge Q = \frac{(p+q)!}{p!\, q!}\, \mathrm{Alt}(P \otimes Q).
+$$
 
 В координатах:
 
-$$(P \wedge Q)_{j_1\ldots j_{p+q}} = \frac{(p+q)!}{p!\,q!} \cdot \frac{1}{(p+q)!} \sum_{\sigma \in S_{p+q}} \mathrm{sgn}(\sigma)\, P_{j_{\sigma(1)}\ldots j_{\sigma(p)}} Q_{j_{\sigma(p+1)}\ldots j_{\sigma(p+q)}}.$$
+$$
+(P \wedge Q)_{j_1\ldots j_{p+q}} = \frac{(p+q)!}{p!\,q!} \cdot \frac{1}{(p+q)!} \sum_{\sigma \in S_{p+q}} \mathrm{sgn}(\sigma)\, P_{j_{\sigma(1)}\ldots j_{\sigma(p)}} Q_{j_{\sigma(p+1)}\ldots j_{\sigma(p+q)}}.
+$$
 
 Это эквивалентно:
 
-$$(P \wedge Q)_{j_1\ldots j_{p+q}} = \frac{1}{p!\,q!} \sum_{\sigma \in S_{p+q}} \mathrm{sgn}(\sigma)\, P_{j_{\sigma(1)}\ldots j_{\sigma(p)}} Q_{j_{\sigma(p+1)}\ldots j_{\sigma(p+q)}}.$$
+$$
+(P \wedge Q)_{j_1\ldots j_{p+q}} = \frac{1}{p!\,q!} \sum_{\sigma \in S_{p+q}} \mathrm{sgn}(\sigma)\, P_{j_{\sigma(1)}\ldots j_{\sigma(p)}} Q_{j_{\sigma(p+1)}\ldots j_{\sigma(p+q)}}.
+$$
 
 **Свойства:**
 
@@ -155,11 +171,16 @@ $$(P \wedge Q)_{j_1\ldots j_{p+q}} = \frac{1}{p!\,q!} \sum_{\sigma \in S_{p+q}} 
 3. **Бистепенность (bigraded):** $(P \wedge Q) \in \Lambda^{p+q}(V^*)$.
 
 4. Для 1-форм $\alpha, \beta \in V^*$:
-$$(\alpha \wedge \beta)(u, v) = \alpha(u)\beta(v) - \alpha(v)\beta(u).$$
+
+$$
+(\alpha \wedge \beta)(u, v) = \alpha(u)\beta(v) - \alpha(v)\beta(u).
+$$
 
 **Внешняя алгебра (алгебра Грассмана):**
 
-$$\Lambda^*(V^*) = \bigoplus_{q=0}^n \Lambda^q(V^*),$$
+$$
+\Lambda^*(V^*) = \bigoplus_{q=0}^n \Lambda^q(V^*),
+$$
 
 с операцией $\wedge$. Это **градуированно-коммутативная ассоциативная алгебра**: $\alpha \wedge \beta = (-1)^{|\alpha||\beta|} \beta \wedge \alpha$, где $|\alpha|, |\beta|$ — степени (= $p$ и $q$).
 
@@ -169,17 +190,23 @@ $$\Lambda^*(V^*) = \bigoplus_{q=0}^n \Lambda^q(V^*),$$
 
 Пусть $\varepsilon^1, \ldots, \varepsilon^n$ — ОНБ $V^*$. Тогда
 
-$$\{\varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_q} : 1 \leq i_1 < i_2 < \cdots < i_q \leq n\}$$
+$$
+\{\varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_q} : 1 \leq i_1 < i_2 < \cdots < i_q \leq n\}
+$$
 
 образует базис $\Lambda^q(V^*)$.
 
-$$\dim \Lambda^q(V^*) = \binom{n}{q}, \quad \dim \Lambda^*(V^*) = 2^n.$$
+$$
+\dim \Lambda^q(V^*) = \binom{n}{q}, \quad \dim \Lambda^*(V^*) = 2^n.
+$$
 
 **Определитель через внешнее произведение.**
 
 Если $v_1, \ldots, v_n \in V$ и $e_1, \ldots, e_n$ — базис, то
 
-$$v_1 \wedge \cdots \wedge v_n = \det\!(v_1, \ldots, v_n)\cdot e_1 \wedge \cdots \wedge e_n,$$
+$$
+v_1 \wedge \cdots \wedge v_n = \det\!(v_1, \ldots, v_n)\cdot e_1 \wedge \cdots \wedge e_n,
+$$
 
 где $\det(v_1,\ldots,v_n)$ — определитель матрицы из координат $v_i$. (Здесь $v_1 \wedge \cdots \wedge v_n$ — элемент $\Lambda^n(V)$, а $e_1 \wedge \cdots \wedge e_n$ — базисный вектор.)
 
@@ -188,14 +215,20 @@ $$v_1 \wedge \cdots \wedge v_n = \det\!(v_1, \ldots, v_n)\cdot e_1 \wedge \cdots
 **Частный случай $q=2$:**
 
 Для $\alpha, \beta \in V^*$:
-$$(\alpha \wedge \beta)(u, v) = \begin{vmatrix} \alpha(u) & \alpha(v) \\ \beta(u) & \beta(v) \end{vmatrix} = \alpha(u)\beta(v) - \alpha(v)\beta(u).$$
+
+$$
+(\alpha \wedge \beta)(u, v) = \begin{vmatrix} \alpha(u) & \alpha(v) \\ \beta(u) & \beta(v) \end{vmatrix} = \alpha(u)\beta(v) - \alpha(v)\beta(u).
+$$
 
 **Пример: стандартный объём.** $e^1 \wedge e^2 \wedge \cdots \wedge e^n (e_1,\ldots,e_n) = 1$.
 
 ### 4. Уровень 3 — глубина
 
 **Связь со знаком перестановки.** Для 1-форм $\alpha_1, \ldots, \alpha_q$:
-$$(\alpha_1 \wedge \cdots \wedge \alpha_q)(v_1, \ldots, v_q) = \det\!\big((\alpha_i(v_j))_{i,j=1}^q\big).$$
+
+$$
+(\alpha_1 \wedge \cdots \wedge \alpha_q)(v_1, \ldots, v_q) = \det\!\big((\alpha_i(v_j))_{i,j=1}^q\big).
+$$
 
 **Нормировка Ершова vs Панова.** В учебнике Ершова $P \wedge Q := \mathrm{Alt}(P \otimes Q)$ (без коэффициента $(p+q)!/(p!q!)$). В Панове — с этим коэффициентом. На экзамене использовать соглашение Панова.
 

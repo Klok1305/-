@@ -28,11 +28,15 @@
 
 **Определение (геометрическое).** Тензорное произведение $\mathcal{S} \otimes \mathcal{T}$ тензоров $\mathcal{S} \in T^p_q(V)$ и $\mathcal{T} \in T^r_s(V)$ — это тензор типа $(p+r, q+s)$, определяемый как
 
-$$(\mathcal{S} \otimes \mathcal{T})(\xi^1,\ldots,\xi^{p+r}, v^1,\ldots,v^{q+s}) = \mathcal{S}(\xi^1,\ldots,\xi^p, v^1,\ldots,v^q) \cdot \mathcal{T}(\xi^{p+1},\ldots,\xi^{p+r}, v^{q+1},\ldots,v^{q+s}).$$
+$$
+(\mathcal{S} \otimes \mathcal{T})(\xi^1,\ldots,\xi^{p+r}, v^1,\ldots,v^{q+s}) = \mathcal{S}(\xi^1,\ldots,\xi^p, v^1,\ldots,v^q) \cdot \mathcal{T}(\xi^{p+1},\ldots,\xi^{p+r}, v^{q+1},\ldots,v^{q+s}).
+$$
 
 **В координатах:**
 
-$$(S \otimes T)^{i_1\ldots i_p k_1\ldots k_r}_{j_1\ldots j_q l_1\ldots l_s} = S^{i_1\ldots i_p}_{j_1\ldots j_q} \cdot T^{k_1\ldots k_r}_{l_1\ldots l_s}.$$
+$$
+(S \otimes T)^{i_1\ldots i_p k_1\ldots k_r}_{j_1\ldots j_q l_1\ldots l_s} = S^{i_1\ldots i_p}_{j_1\ldots j_q} \cdot T^{k_1\ldots k_r}_{l_1\ldots l_s}.
+$$
 
 Тензорное произведение **не коммутативно**: $\mathcal{S} \otimes \mathcal{T} \neq \mathcal{T} \otimes \mathcal{S}$ в общем случае, но **ассоциативно**.
 
@@ -40,7 +44,9 @@ $$(S \otimes T)^{i_1\ldots i_p k_1\ldots k_r}_{j_1\ldots j_q l_1\ldots l_s} = S^
 
 Прямая сумма
 
-$$T(V) = \bigoplus_{p,q \geq 0} T^p_q(V)$$
+$$
+T(V) = \bigoplus_{p,q \geq 0} T^p_q(V)
+$$
 
 с операцией $\otimes$ образует **тензорную алгебру** (алгебра Грассмана в широком смысле). Это некоммутативная ассоциативная алгебра.
 
@@ -48,11 +54,15 @@ $$T(V) = \bigoplus_{p,q \geq 0} T^p_q(V)$$
 
 **Определение.** Свёртка по паре индексов (один верхний $k$, один нижний $l$) — это линейная операция
 
-$$\mathrm{tr}_{k,l}: T^p_q(V) \to T^{p-1}_{q-1}(V),$$
+$$
+\mathrm{tr}_{k,l}: T^p_q(V) \to T^{p-1}_{q-1}(V),
+$$
 
 определяемая в координатах: фиксируем $k$-й верхний и $l$-й нижний индекс равными и суммируем:
 
-$$(\mathrm{tr}_{k,l}\, T)^{i_1\ldots \hat{i}_k \ldots i_p}_{j_1\ldots \hat{j}_l \ldots j_q} = \sum_{m=1}^n T^{i_1\ldots m \ldots i_p}_{j_1\ldots m \ldots j_q}.$$
+$$
+(\mathrm{tr}_{k,l}\, T)^{i_1\ldots \hat{i}_k \ldots i_p}_{j_1\ldots \hat{j}_l \ldots j_q} = \sum_{m=1}^n T^{i_1\ldots m \ldots i_p}_{j_1\ldots m \ldots j_q}.
+$$
 
 (Шляпка означает пропущенный индекс, $m$ стоит на $k$-м верхнем и $l$-м нижнем местах.)
 
@@ -67,10 +77,16 @@ $$(\mathrm{tr}_{k,l}\, T)^{i_1\ldots \hat{i}_k \ldots i_p}_{j_1\ldots \hat{j}_l 
 **В евклидовом (или эрмитовом) пространстве** задан метрический тензор $g_{ij} = (e_i, e_j)$ типа $(0,2)$ и обратный $g^{ij}$ типа $(2,0)$, $(g^{ij}) = (g_{ij})^{-1}$.
 
 **Опускание верхнего индекса:**
-$$T_{i_1\ldots i_p\, j_1\ldots j_q} = g_{i_1 k_1} \cdots g_{i_p k_p}\, T^{k_1\ldots k_p}_{j_1\ldots j_q}.$$
+
+$$
+T_{i_1\ldots i_p\, j_1\ldots j_q} = g_{i_1 k_1} \cdots g_{i_p k_p}\, T^{k_1\ldots k_p}_{j_1\ldots j_q}.
+$$
 
 **Поднятие нижнего индекса:**
-$$T^{i_1\ldots i_p\, j_1\ldots j_q} = g^{j_1 l_1} \cdots g^{j_q l_q}\, T^{i_1\ldots i_p}_{l_1\ldots l_q}.$$
+
+$$
+T^{i_1\ldots i_p\, j_1\ldots j_q} = g^{j_1 l_1} \cdots g^{j_q l_q}\, T^{i_1\ldots i_p}_{l_1\ldots l_q}.
+$$
 
 В ОНБ (где $g_{ij} = \delta_{ij}$) поднятие/опускание ничего не меняет: $T^i = T_i$.
 
@@ -80,7 +96,9 @@ $$T^{i_1\ldots i_p\, j_1\ldots j_q} = g^{j_1 l_1} \cdots g^{j_q l_q}\, T^{i_1\ld
 
 Пусть $B$ — билинейная форма (тензор типа $(0,2)$) с компонентами $B_{ij}$. Поднимаем первый индекс:
 
-$$A^i_j = g^{ik} B_{kj}.$$
+$$
+A^i_j = g^{ik} B_{kj}.
+$$
 
 Это линейный оператор (тензор типа $(1,1)$). В ОНБ: $A^i_j = B_{ij}$, т.е. матрица оператора совпадает с матрицей формы.
 
@@ -88,7 +106,9 @@ $$A^i_j = g^{ik} B_{kj}.$$
 
 Пусть $A^i_j$ — оператор. Опускаем верхний индекс:
 
-$$B_{ij} = g_{ik} A^k_j.$$
+$$
+B_{ij} = g_{ik} A^k_j.
+$$
 
 Это «ассоциированная билинейная форма» оператора. В евклидовом пространстве $B(u,v) = (u, \mathcal{A}v)$.
 
@@ -103,7 +123,10 @@ $$B_{ij} = g_{ik} A^k_j.$$
 **Поднятие/опускание в неортонормированном базисе:** важно, что $g^{ij} \neq g_{ij}$ (обратная матрица, не та же). Надо вычислять $(g_{ij})^{-1}$.
 
 **Пример — след через свёртку и метрику:**
-$$\mathrm{tr} A = A^i_i = g^{ij} A_{ij} = g^{ij}(e_i, \mathcal{A}e_j).$$
+
+$$
+\mathrm{tr} A = A^i_i = g^{ij} A_{ij} = g^{ij}(e_i, \mathcal{A}e_j).
+$$
 
 ---
 
@@ -122,7 +145,10 @@ $$\mathrm{tr} A = A^i_i = g^{ij} A_{ij} = g^{ij}(e_i, \mathcal{A}e_j).$$
 Пусть $T \in T^2_1(V)$. Свёртка по 1-му верхнему и 1-му нижнему: $S^j = \sum_i T^{ij}_i$ (это должен быть вектор, тензор типа $(1,0)$).
 
 При смене базиса: $T'^{i'j'}_{k'} = c^{i'}_i c^{j'}_j c^k_{k'} T^{ij}_k$. Свёртка:
-$$S'^{j'} = \sum_{i'} T'^{i'j'}_{i'} = \sum_{i'} c^{i'}_i c^{j'}_j c^k_{i'} T^{ij}_k = c^{j'}_j \underbrace{\left(\sum_{i'} c^{i'}_i c^k_{i'}\right)}_{= \delta^k_i} T^{ij}_k = c^{j'}_j T^{ij}_i = c^{j'}_j S^j.$$
+
+$$
+S'^{j'} = \sum_{i'} T'^{i'j'}_{i'} = \sum_{i'} c^{i'}_i c^{j'}_j c^k_{i'} T^{ij}_k = c^{j'}_j \underbrace{\left(\sum_{i'} c^{i'}_i c^k_{i'}\right)}_{= \delta^k_i} T^{ij}_k = c^{j'}_j T^{ij}_i = c^{j'}_j S^j.
+$$
 
 Это закон преобразования вектора — свёртка действительно тензор типа $(1,0)$. ✓
 

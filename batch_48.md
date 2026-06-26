@@ -28,7 +28,9 @@
 
 **Определение 6.1.1 (Панов).** Полилинейной функцией типа $(p,q)$ называется функция
 
-$$\mathcal{T}: \underbrace{V^*\times\cdots\times V^*}_{p} \times \underbrace{V\times\cdots\times V}_{q} \to \mathbb{k}$$
+$$
+\mathcal{T}: \underbrace{V^*\times\cdots\times V^*}_{p} \times \underbrace{V\times\cdots\times V}_{q} \to \mathbb{k}
+$$
 
 (от $p$ ковекторных и $q$ векторных аргументов), линейная по каждому аргументу.
 
@@ -46,21 +48,29 @@ $$\mathcal{T}: \underbrace{V^*\times\cdots\times V^*}_{p} \times \underbrace{V\t
 
 **Компоненты тензора:** для $\mathcal{T} \in P^p_q(V)$ определим числа
 
-$$T^{i_1\ldots i_p}_{j_1\ldots j_q} := \mathcal{T}(\varepsilon^{i_1}, \ldots, \varepsilon^{i_p}, e_{j_1}, \ldots, e_{j_q}).$$
+$$
+T^{i_1\ldots i_p}_{j_1\ldots j_q} := \mathcal{T}(\varepsilon^{i_1}, \ldots, \varepsilon^{i_p}, e_{j_1}, \ldots, e_{j_q}).
+$$
 
 По полилинейности $\mathcal{T}$ полностью восстанавливается из компонент:
 
-$$\mathcal{T}(\xi^1, \ldots, \xi^p, v^1, \ldots, v^q) = \xi^1_{i_1} \cdots \xi^p_{i_p}\, v^{j_1}_1 \cdots v^{j_q}_q\; T^{i_1\ldots i_p}_{j_1\ldots j_q}$$
+$$
+\mathcal{T}(\xi^1, \ldots, \xi^p, v^1, \ldots, v^q) = \xi^1_{i_1} \cdots \xi^p_{i_p}\, v^{j_1}_1 \cdots v^{j_q}_q\; T^{i_1\ldots i_p}_{j_1\ldots j_q}
+$$
 
 (суммирование по повторяющимся индексам, обозначения Эйнштейна).
 
 **Закон преобразования.** Пусть $C = (c^i_{i'})$ — матрица перехода от базиса $e$ к базису $e'$ (т.е. $e_{j'} = c^j_{j'} e_j$, $\varepsilon^{i'} = c^{i'}_{i} \varepsilon^i$). Тогда компоненты тензора в новом базисе:
 
-$$T^{i'_1\ldots i'_p}_{j'_1\ldots j'_q} = c^{i'_1}_{i_1} \cdots c^{i'_p}_{i_p}\; c^{j_1}_{j'_1} \cdots c^{j_q}_{j'_q}\; T^{i_1\ldots i_p}_{j_1\ldots j_q}.$$
+$$
+T^{i'_1\ldots i'_p}_{j'_1\ldots j'_q} = c^{i'_1}_{i_1} \cdots c^{i'_p}_{i_p}\; c^{j_1}_{j'_1} \cdots c^{j_q}_{j'_q}\; T^{i_1\ldots i_p}_{j_1\ldots j_q}.
+$$
 
 **Определение 6.2.1 (тензор координатный).** Тензором типа $(p,q)$ называется соответствие
 
-$$\{\text{базисы в } V\} \mapsto \{\text{наборы } n^{p+q} \text{ чисел } T^{i_1\ldots i_p}_{j_1\ldots j_q}\},$$
+$$
+\{\text{базисы в } V\} \mapsto \{\text{наборы } n^{p+q} \text{ чисел } T^{i_1\ldots i_p}_{j_1\ldots j_q}\},
+$$
 
 удовлетворяющее закону преобразования выше.
 
@@ -68,13 +78,17 @@ $$\{\text{базисы в } V\} \mapsto \{\text{наборы } n^{p+q} \text{ ч
 
 Любая полилинейная функция $\mathcal{T} \in P^p_q(V)$ задаёт тензор через компоненты $(6.1)$, и обратно — тензор задаёт полилинейную функцию через формулу выше. Это соответствие — изоморфизм:
 
-$$P^p_q(V) \cong T^p_q(V).$$
+$$
+P^p_q(V) \cong T^p_q(V).
+$$
 
 Это обобщает знакомое: матрица линейного оператора в базисе ↔ сам оператор.
 
 ### Размерность
 
-$$\dim T^p_q(V) = n^{p+q}, \quad n = \dim V.$$
+$$
+\dim T^p_q(V) = n^{p+q}, \quad n = \dim V.
+$$
 
 Потому что каждый из $p+q$ индексов независимо принимает $n$ значений.
 
@@ -90,7 +104,9 @@ $$\dim T^p_q(V) = n^{p+q}, \quad n = \dim V.$$
 
 **Пример (тензор типа $(1,1)$ = оператор):**
 
-$$T^i_j = \mathcal{T}(\varepsilon^i, e_j) = \varepsilon^i(\mathcal{A}(e_j)) = A^i_j,$$
+$$
+T^i_j = \mathcal{T}(\varepsilon^i, e_j) = \varepsilon^i(\mathcal{A}(e_j)) = A^i_j,
+$$
 
 т.е. компоненты тензора типа $(1,1)$ — это матрица оператора. Закон преобразования $(T')^{i'}_{j'} = c^{i'}_i T^i_j c^j_{j'}$ — это в точности закон $A' = C^{-1}AC$.
 
