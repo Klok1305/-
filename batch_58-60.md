@@ -1,4 +1,4 @@
-# Батч 58–60: Грассманиан, координаты Плюккера, разложимые тензоры
+﻿# Батч 58–60: Грассманиан, координаты Плюккера, разложимые тензоры
 
 > **Источники:** Ершов «Тензоры», Панов §6 + задачи 31–35 (стр. 111–113). Теоремы о вложении Плюккера и условиях разложимости — из общей математики, так как в тексте Панова они представлены в виде задач без доказательств.
 
@@ -100,27 +100,27 @@ $$\omega = v_1 \wedge v_2 \wedge \cdots \wedge v_k, \quad v_1,\ldots,v_k \in V.$
 
 **Носитель тензора.** Для $\omega \in \Lambda^k V$ определим
 
-$$\operatorname{supp}(\omega) = \{v \in V : v \wedge \omega = 0\} \subset V.$$
+$$\mathrm{supp}(\omega) = \{v \in V : v \wedge \omega = 0\} \subset V.$$
 
-Для разложимого $\omega = v_1\wedge\cdots\wedge v_k$: $\operatorname{supp}(\omega) = \langle v_1,\ldots,v_k\rangle$ (то самое подпространство $W$).
+Для разложимого $\omega = v_1\wedge\cdots\wedge v_k$: $\mathrm{supp}(\omega) = \langle v_1,\ldots,v_k\rangle$ (то самое подпространство $W$).
 
 **Свёртка с набором ковекторов.** Для ковекторов $\xi^1,\ldots,\xi^{k-1} \in V^*$ и тензора $\omega \in \Lambda^k V$ определим $\iota_{\xi^1,\ldots,\xi^{k-1}}\omega \in V$ как вектор, такой что:
 
 $$\eta(\iota_{\xi^1,\ldots,\xi^{k-1}}\omega) = \omega(\xi^1,\ldots,\xi^{k-1},\eta) \quad \text{для всех } \eta \in V^*.$$
 
-**Порождающая система носителя.** Множество $\{\iota_{\xi^1,\ldots,\xi^{k-1}}\omega : \xi^i \in V^*\}$ порождает $\operatorname{supp}(\omega)$.
+**Порождающая система носителя.** Множество $\{\iota_{\xi^1,\ldots,\xi^{k-1}}\omega : \xi^i \in V^*\}$ порождает $\mathrm{supp}(\omega)$.
 
 ### 3. Уровень 2
 
 **Почему разложимый тензор однозначно задаёт подпространство:**
 
-$v \in \operatorname{supp}(\omega)$ $\Leftrightarrow$ $v \wedge v_1\wedge\cdots\wedge v_k = 0$ $\Leftrightarrow$ $v \in \langle v_1,\ldots,v_k\rangle$ (т.к. $\{v_1,\ldots,v_k\}$ — базис $W$, а $v_1\wedge\cdots\wedge v_k\neq0$). Значит $\operatorname{supp}(\omega) = W$ — не зависит от разложения.
+$v \in \mathrm{supp}(\omega)$ $\Leftrightarrow$ $v \wedge v_1\wedge\cdots\wedge v_k = 0$ $\Leftrightarrow$ $v \in \langle v_1,\ldots,v_k\rangle$ (т.к. $\{v_1,\ldots,v_k\}$ — базис $W$, а $v_1\wedge\cdots\wedge v_k\neq0$). Значит $\mathrm{supp}(\omega) = W$ — не зависит от разложения.
 
 **Кос. тензор типа $(0,k)$ vs $\Lambda^k V$.** Для форм (тензоры типа $(0,k)$): $\omega \in \Lambda^k(V^*)$ разложима, если $\omega = \alpha_1\wedge\cdots\wedge\alpha_k$, $\alpha_i \in V^*$.
 
 ### 4. Мини-конспект
 
-Разложимый тензор: $\omega = v_1\wedge\cdots\wedge v_k$. Задаёт единственное подпространство $W = \langle v_1,\ldots,v_k\rangle = \operatorname{supp}(\omega)$. Носитель: $\operatorname{supp}(\omega) = \{v: v\wedge\omega=0\}$. Порождается свёртками $\iota_{\xi_1,\ldots,\xi_{k-1}}\omega$.
+Разложимый тензор: $\omega = v_1\wedge\cdots\wedge v_k$. Задаёт единственное подпространство $W = \langle v_1,\ldots,v_k\rangle = \mathrm{supp}(\omega)$. Носитель: $\mathrm{supp}(\omega) = \{v: v\wedge\omega=0\}$. Порождается свёртками $\iota_{\xi_1,\ldots,\xi_{k-1}}\omega$.
 
 ---
 
@@ -134,13 +134,13 @@ $v \in \operatorname{supp}(\omega)$ $\Leftrightarrow$ $v \wedge v_1\wedge\cdots\
 
 **Теорема (критерий разложимости).** Кос. тензор $\omega \in \Lambda^k V$ ($\omega \neq 0$) разложим тогда и только тогда, когда
 
-$$v \wedge \omega = 0 \quad \text{для всех } v \in \operatorname{supp}(\omega).$$
+$$v \wedge \omega = 0 \quad \text{для всех } v \in \mathrm{supp}(\omega).$$
 
 Эквивалентно:
 
-$$\dim \operatorname{supp}(\omega) = k.$$
+$$\dim \mathrm{supp}(\omega) = k.$$
 
-(Для общего $\omega \in \Lambda^k V$: $\dim\operatorname{supp}(\omega) \geq k$; равенство $= k$ $\Leftrightarrow$ разложим.)
+(Для общего $\omega \in \Lambda^k V$: $\dim\mathrm{supp}(\omega) \geq k$; равенство $= k$ $\Leftrightarrow$ разложим.)
 
 **Другая формулировка (для $\Lambda^2$).** $\omega \in \Lambda^2 V$ разложим $\Leftrightarrow$ $\omega \wedge \omega = 0$.
 
@@ -148,7 +148,7 @@ $$\dim \operatorname{supp}(\omega) = k.$$
 
 $$\omega(v_1,\ldots,v_{k-1},\cdot) \wedge \omega = 0 \quad \text{в } \Lambda^{2k-1}(V^*).$$
 
-Это эквивалентно тому, что все контракции $\iota_{v_1}\cdots\iota_{v_{k-1}}\omega$ лежат в подпространстве $\operatorname{supp}(\omega)$ размерности $k$.
+Это эквивалентно тому, что все контракции $\iota_{v_1}\cdots\iota_{v_{k-1}}\omega$ лежат в подпространстве $\mathrm{supp}(\omega)$ размерности $k$.
 
 **Теорема о вложении Плюккера.** Вложение Плюккера
 
@@ -182,7 +182,7 @@ $$\omega\wedge\omega = 2(p_{12}p_{34} - p_{13}p_{24} + p_{14}p_{23})\, e_1\wedge
 
 ### 5. Мини-конспект
 
-Критерий разложимости $\omega\in\Lambda^k V$: $\omega$ разложим $\Leftrightarrow$ $\dim\operatorname{supp}(\omega)=k$ $\Leftrightarrow$ $v\wedge\omega=0$ $\forall v\in\operatorname{supp}(\omega)$. Для $k=2$: $\omega\wedge\omega=0$. Теорема о вложении: $G(k,n)\hookrightarrow\mathbb{P}(\Lambda^kV)$, образ = разложимые тензоры, задаётся соотношениями Плюккера (квадратичными). Для $G(2,4)$: $p_{12}p_{34}-p_{13}p_{24}+p_{14}p_{23}=0$.
+Критерий разложимости $\omega\in\Lambda^k V$: $\omega$ разложим $\Leftrightarrow$ $\dim\mathrm{supp}(\omega)=k$ $\Leftrightarrow$ $v\wedge\omega=0$ $\forall v\in\mathrm{supp}(\omega)$. Для $k=2$: $\omega\wedge\omega=0$. Теорема о вложении: $G(k,n)\hookrightarrow\mathbb{P}(\Lambda^kV)$, образ = разложимые тензоры, задаётся соотношениями Плюккера (квадратичными). Для $G(2,4)$: $p_{12}p_{34}-p_{13}p_{24}+p_{14}p_{23}=0$.
 
 ---
 
@@ -194,15 +194,15 @@ $$\omega\wedge\omega = 2(p_{12}p_{34} - p_{13}p_{24} + p_{14}p_{23})\, e_1\wedge
 |-------|-------------|-----------|----------|-----------|
 | 58 | Грассманиан, координаты Плюккера | Определения, соотношение для $G(2,4)$ | ★★★ | ★★★ |
 | 59 | Разложимые тензоры, носитель | Определение, теорема об однозначности | ★★★ | ★★★ |
-| 60 | Критерий разложимости, теорема о вложении | Критерий ($\dim\operatorname{supp}=k$), теорему | ★★★ | ★★★ |
+| 60 | Критерий разложимости, теорема о вложении | Критерий ($\dim\mathrm{supp}=k$), теорему | ★★★ | ★★★ |
 
 ### Если времени мало
 
 1. $G(k,n)$ — множество $k$-мерных подпространств $V^n$.
 2. Координаты Плюккера: $p_{i_1\ldots i_k}$ — миноры базисной матрицы.
 3. $\omega = v_1\wedge\cdots\wedge v_k$ — разложимый тензор; задаёт $W=\langle v_i\rangle$.
-4. Носитель: $\operatorname{supp}(\omega) = \{v: v\wedge\omega=0\}$.
-5. Критерий: $\omega$ разложим $\Leftrightarrow$ $\dim\operatorname{supp} = k$ (для $k=2$: $\omega\wedge\omega=0$).
+4. Носитель: $\mathrm{supp}(\omega) = \{v: v\wedge\omega=0\}$.
+5. Критерий: $\omega$ разложим $\Leftrightarrow$ $\dim\mathrm{supp} = k$ (для $k=2$: $\omega\wedge\omega=0$).
 6. Соотношение Плюккера для $G(2,4)$: $p_{12}p_{34}-p_{13}p_{24}+p_{14}p_{23}=0$.
 
 ### Вопросы для самопроверки
@@ -212,6 +212,6 @@ $$\omega\wedge\omega = 2(p_{12}p_{34} - p_{13}p_{24} + p_{14}p_{23})\, e_1\wedge
 3. Запишите соотношение Плюккера для $G(2,4)$.
 4. Что такое разложимый тензор?
 5. Почему разложимый тензор однозначно задаёт подпространство?
-6. Что такое носитель тензора $\operatorname{supp}(\omega)$?
+6. Что такое носитель тензора $\mathrm{supp}(\omega)$?
 7. Сформулируйте критерий разложимости для $\Lambda^2 V$.
 8. Что утверждает теорема о вложении Плюккера?

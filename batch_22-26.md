@@ -1,4 +1,4 @@
-# Батч 22–26: Жорданова форма, экспонента, многочлен Фробениуса
+﻿# Батч 22–26: Жорданова форма, экспонента, многочлен Фробениуса
 
 ## Список билетов
 
@@ -57,7 +57,7 @@ $$J = J_{\lambda_1}^{(n_1)} \oplus J_{\lambda_2}^{(n_2)} \oplus \cdots \oplus J_
 
 $$\mathcal{A} f_1 = \lambda f_1, \quad \mathcal{A} f_k = \lambda f_k + f_{k-1} \text{ для } k \geq 2.$$
 
-**Корневые подпространства.** $R_\lambda = \ker(\mathcal{A} - \lambda \operatorname{id})^{r_\lambda}$, где $r_\lambda$ — алгебраическая кратность $\lambda$.
+**Корневые подпространства.** $R_\lambda = \ker(\mathcal{A} - \lambda \mathrm{id})^{r_\lambda}$, где $r_\lambda$ — алгебраическая кратность $\lambda$.
 
 $$V = R_{\lambda_1} \oplus R_{\lambda_2} \oplus \cdots \oplus R_{\lambda_k}.$$
 
@@ -72,13 +72,13 @@ $$\mu_{\mathcal{A}}(t) = \prod_{i=1}^{k} (t - \lambda_i)^{m_i},$$
 **Идея доказательства теоремы о минимальном многочлене:**
 
 Шаги:
-1. $R_{\lambda_i} = \ker(\mathcal{A} - \lambda_i \operatorname{id})^{m_i}$, поэтому многочлен $(t - \lambda_i)^{m_i}$ аннулирует $\mathcal{A}|_{R_{\lambda_i}}$.
+1. $R_{\lambda_i} = \ker(\mathcal{A} - \lambda_i \mathrm{id})^{m_i}$, поэтому многочлен $(t - \lambda_i)^{m_i}$ аннулирует $\mathcal{A}|_{R_{\lambda_i}}$.
 2. Так как $V = \bigoplus_i R_{\lambda_i}$ и $P(t) = \prod_i (t-\lambda_i)^{m_i}$ содержит множитель для каждого $R_{\lambda_i}$, то $P(\mathcal{A}) = 0$.
 3. Любой аннулирующий многочлен делится на $(t-\lambda_i)^{m_i}$ (иначе он не аннулировал бы $\mathcal{A}|_{R_{\lambda_i}}$), значит делится на $P(t)$.
 
 **Связь кратностей:**
 - Алгебраическая кратность $r_\lambda$ = $\dim R_\lambda$ = сумма размеров всех клеток с $\lambda$.
-- Геометрическая кратность = $\dim \ker(\mathcal{A} - \lambda \operatorname{id})$ = число жордановых клеток с $\lambda$.
+- Геометрическая кратность = $\dim \ker(\mathcal{A} - \lambda \mathrm{id})$ = число жордановых клеток с $\lambda$.
 - $m_\lambda$ = размер максимальной клетки с $\lambda$ = показатель в минимальном многочлене.
 
 ### 5. Уровень 3 — глубина
@@ -205,7 +205,7 @@ $f(J_\lambda) = $ верхняя треугольная матрица, где $
 ### 2. Карта билета
 
 - Определение экспоненты (ряд).
-- $\det e^\mathcal{A} = e^{\operatorname{tr} \mathcal{A}}$ (Предложение 2.11.6).
+- $\det e^\mathcal{A} = e^{\mathrm{tr} \mathcal{A}}$ (Предложение 2.11.6).
 - $e^\mathcal{A} e^\mathcal{B} = e^{\mathcal{A}+\mathcal{B}}$ при коммутировании (Предложение 2.11.7).
 - Начальные члены формулы BCH.
 
@@ -213,11 +213,11 @@ $f(J_\lambda) = $ верхняя треугольная матрица, где $
 
 **Определение 2.11.5.** Экспонентой оператора $\mathcal{A}$ называется
 
-$$e^\mathcal{A} = \sum_{k=0}^\infty \frac{1}{k!} \mathcal{A}^k = \operatorname{id} + \mathcal{A} + \frac{\mathcal{A}^2}{2} + \frac{\mathcal{A}^3}{6} + \cdots$$
+$$e^\mathcal{A} = \sum_{k=0}^\infty \frac{1}{k!} \mathcal{A}^k = \mathrm{id} + \mathcal{A} + \frac{\mathcal{A}^2}{2} + \frac{\mathcal{A}^3}{6} + \cdots$$
 
 **Предложение 2.11.6.**
 
-$$\det e^\mathcal{A} = e^{\operatorname{tr} \mathcal{A}}.$$
+$$\det e^\mathcal{A} = e^{\mathrm{tr} \mathcal{A}}.$$
 
 **Предложение 2.11.7.** Если $\mathcal{A}\mathcal{B} = \mathcal{B}\mathcal{A}$ (операторы коммутируют), то
 
@@ -231,13 +231,13 @@ $$\log(e^X e^Y) = X + Y + \frac{1}{2}[X, Y] + \frac{1}{12}[X,[X,Y]] - \frac{1}{1
 
 ### 4. Уровень 2 — для четвёрки
 
-**Доказательство $\det e^\mathcal{A} = e^{\operatorname{tr} \mathcal{A}}$:**
+**Доказательство $\det e^\mathcal{A} = e^{\mathrm{tr} \mathcal{A}}$:**
 
 1. Приводим $A = CJC^{-1}$ к жордановой форме.
 2. $e^A = C e^J C^{-1}$, поэтому $\det e^A = \det e^J$.
-3. $e^J = \operatorname{diag}(e^{J_{\lambda_1}}, \ldots, e^{J_{\lambda_k}})$ (блочно-диагональная).
+3. $e^J = \mathrm{diag}(e^{J_{\lambda_1}}, \ldots, e^{J_{\lambda_k}})$ (блочно-диагональная).
 4. $e^{J_\lambda^{(n)}}$ — верхнетреугольная с $e^\lambda$ на диагонали, значит $\det e^{J_\lambda^{(n)}} = e^{n\lambda}$.
-5. $\det e^J = \prod_i e^{r_{\lambda_i} \lambda_i} = e^{\sum_i r_{\lambda_i} \lambda_i} = e^{\operatorname{tr} J} = e^{\operatorname{tr} A}$.
+5. $\det e^J = \prod_i e^{r_{\lambda_i} \lambda_i} = e^{\sum_i r_{\lambda_i} \lambda_i} = e^{\mathrm{tr} J} = e^{\mathrm{tr} A}$.
 
 **Доказательство $e^\mathcal{A} e^\mathcal{B} = e^{\mathcal{A}+\mathcal{B}}$ при коммутировании:**
 
@@ -269,7 +269,7 @@ $$e^X e^Y = I + (X+Y) + \frac{(X+Y)^2}{2} + \frac{[X,Y]}{2} + O(3) = e^{X+Y + \f
 ### 7. Типичные ошибки
 
 - Писать $e^A e^B = e^{A+B}$ без оговорки о коммутировании.
-- В формуле $\det e^A = e^{\operatorname{tr} A}$: след берётся от **исходного** оператора (не от ЖНФ — они равны).
+- В формуле $\det e^A = e^{\mathrm{tr} A}$: след берётся от **исходного** оператора (не от ЖНФ — они равны).
 
 ### 8. Вопросы преподавателя
 
@@ -279,7 +279,7 @@ $$e^X e^Y = I + (X+Y) + \frac{(X+Y)^2}{2} + \frac{[X,Y]}{2} + O(3) = e^{X+Y + \f
 
 ### 9. Мини-конспект
 
-$e^\mathcal{A} = \sum \frac{\mathcal{A}^k}{k!}$. Факты: $\det e^\mathcal{A} = e^{\operatorname{tr}\mathcal{A}}$ (через ЖНФ); при $[\mathcal{A},\mathcal{B}]=0$: $e^\mathcal{A} e^\mathcal{B} = e^{\mathcal{A}+\mathcal{B}}$; в общем случае $\log(e^X e^Y) = X + Y + \frac{1}{2}[X,Y] + \cdots$ (BCH).
+$e^\mathcal{A} = \sum \frac{\mathcal{A}^k}{k!}$. Факты: $\det e^\mathcal{A} = e^{\mathrm{tr}\mathcal{A}}$ (через ЖНФ); при $[\mathcal{A},\mathcal{B}]=0$: $e^\mathcal{A} e^\mathcal{B} = e^{\mathcal{A}+\mathcal{B}}$; в общем случае $\log(e^X e^Y) = X + Y + \frac{1}{2}[X,Y] + \cdots$ (BCH).
 
 ---
 
@@ -301,7 +301,7 @@ $e^\mathcal{A} = \sum \frac{\mathcal{A}^k}{k!}$. Факты: $\det e^\mathcal{A}
 
 $$\mu_v(\mathcal{A})\, v = 0.$$
 
-**Связь с оператором.** $\mu_v(t)$ делит $\mu_\mathcal{A}(t)$ для любого $v$. Также $\mu_\mathcal{A}(t) = \operatorname{НОК}_{v \in V} \mu_v(t)$.
+**Связь с оператором.** $\mu_v(t)$ делит $\mu_\mathcal{A}(t)$ для любого $v$. Также $\mu_\mathcal{A}(t) = \text{НОК}_{v \in V} \mu_v(t)$.
 
 **Лемма (ключевая).** Существует вектор $v \in V$ такой, что $\mu_v(t) = \mu_\mathcal{A}(t)$.
 
@@ -313,7 +313,7 @@ $$\mu_v(\mathcal{A})\, v = 0.$$
 
 Возьмём для каждого $\lambda_i$ вектор $v_i$ в начале жордановой цепочки максимальной длины $m_i$. Тогда $\mu_{v_i}(t) = (t-\lambda_i)^{m_i}$. Положим $v = v_1 + \cdots + v_k$ (по одному вектору для каждого $\lambda_i$). Тогда
 
-$$\mu_v(t) = \operatorname{НОК}(\mu_{v_1},\ldots,\mu_{v_k}) = \prod_i (t-\lambda_i)^{m_i} = \mu_\mathcal{A}(t).$$
+$$\mu_v(t) = \text{НОК}(\mu_{v_1},\ldots,\mu_{v_k}) = \prod_i (t-\lambda_i)^{m_i} = \mu_\mathcal{A}(t).$$
 
 (Делители $\mu_{v_i}$ попарно взаимно просты, т.к. $\lambda_i$ различны.)
 
@@ -391,7 +391,7 @@ $$F = C_{p_1} \oplus C_{p_2} \oplus \cdots \oplus C_{p_r},$$
 |-------|-------------|-------------------|----------------------|----------|-----------|
 | 22 | ЖНФ, мин. многочлен | Формулу $\mu_\mathcal{A} = \prod(t-\lambda_i)^{m_i}$ | Мин. многочлен (Пр. 2.10.3) | ★★★ | ★★ |
 | 23 | $f(J_\lambda)$ формула | Матрицу $f(J_\lambda)$ | Индукция + линейность | ★★★ | ★★ |
-| 24 | $e^\mathcal{A}$, BCH | $\det e^\mathcal{A} = e^{\operatorname{tr}\mathcal{A}}$, начало BCH | $\det$ через ЖНФ; $e^\mathcal{A}e^\mathcal{B}$ при коммут. | ★★★ | ★★ |
+| 24 | $e^\mathcal{A}$, BCH | $\det e^\mathcal{A} = e^{\mathrm{tr}\mathcal{A}}$, начало BCH | $\det$ через ЖНФ; $e^\mathcal{A}e^\mathcal{B}$ при коммут. | ★★★ | ★★ |
 | 25 | $\mu_v$, лемма | Формулировку леммы | Идею через жорданов базис | ★★ | ★★ |
 | 26 | Форма Фробениуса | Формулировку теоремы, $C_p$ | Идею через $\mu_v$ | ★★ | ★★★ |
 
@@ -400,7 +400,7 @@ $$F = C_{p_1} \oplus C_{p_2} \oplus \cdots \oplus C_{p_r},$$
 1. Жорданова клетка $J_\lambda^{(n)}$ — знать наизусть.
 2. $\mu_\mathcal{A}(t) = \prod (t-\lambda_i)^{m_i}$ — знать наизусть.
 3. $f(J_\lambda)$ — знать формулу (производные на диагоналях / факториалы).
-4. $\det e^\mathcal{A} = e^{\operatorname{tr}\mathcal{A}}$ — знать наизусть.
+4. $\det e^\mathcal{A} = e^{\mathrm{tr}\mathcal{A}}$ — знать наизусть.
 5. Начало BCH: $\log(e^X e^Y) = X + Y + \frac{1}{2}[X,Y] + \cdots$
 
 ### Приоритет повторения
@@ -420,7 +420,7 @@ $$F = C_{p_1} \oplus C_{p_2} \oplus \cdots \oplus C_{p_r},$$
 2. Какой минимальный многочлен у $J_\lambda^{(n)}$?
 3. Чему равен $(i,j)$-й элемент матрицы $f(J_\lambda)$?
 4. Чему равно $e^{J_\lambda^{(2)}}$?
-5. Почему $\det e^A = e^{\operatorname{tr} A}$?
+5. Почему $\det e^A = e^{\mathrm{tr} A}$?
 6. Когда $e^A e^B = e^{A+B}$?
 7. Первые два члена BCH?
 8. Что такое $\mu_v(t)$? Как соотносится с $\mu_\mathcal{A}$?
@@ -432,7 +432,7 @@ $$F = C_{p_1} \oplus C_{p_2} \oplus \cdots \oplus C_{p_r},$$
 1. Найдите ЖНФ $\begin{pmatrix} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 3 \end{pmatrix}$. Каков минимальный многочлен?
 2. Вычислите $f(J_1^{(3)})$ для $f(t) = t^2$.
 3. Вычислите $e^{\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}}$.
-4. Пусть $\operatorname{tr} A = 5$. Найдите $\det e^A$.
+4. Пусть $\mathrm{tr} A = 5$. Найдите $\det e^A$.
 5. Что такое $\log(e^X e^Y)$ с точностью до членов первого порядка по $[X,Y]$?
 
 ### План повторения
