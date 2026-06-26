@@ -72,7 +72,7 @@ $$\mu_{\mathcal{A}}(t) = \prod_{i=1}^{k} (t - \lambda_i)^{m_i},$$
 **Идея доказательства теоремы о минимальном многочлене:**
 
 Шаги:
-1. $R_{\lambda_i} = \ker(\mathcal{A} - \lambda_i \mathrm{id})^{m_i}$, поэтому многочлен $(t - \lambda_i)^{m_i}$ аннулирует $\mathcal{A}|_{R_{\lambda_i}}$.
+1. $R_{\lambda_i} = \ker(\mathcal{A} - \lambda_i \mathrm{id})^{m_i}$, поэтому многочлен $(t - \lambda_i)^{m_i}$ аннулирует $`\mathcal{A}|_{R_{\lambda_i}}`$.
 2. Так как $V = \bigoplus_i R_{\lambda_i}$ и $P(t) = \prod_i (t-\lambda_i)^{m_i}$ содержит множитель для каждого $R_{\lambda_i}$, то $P(\mathcal{A}) = 0$.
 3. Любой аннулирующий многочлен делится на $(t-\lambda_i)^{m_i}$ (иначе он не аннулировал бы $\mathcal{A}|_{R_{\lambda_i}}$), значит делится на $P(t)$.
 
